@@ -1,0 +1,364 @@
+@font-face{
+	src : url('fonts/GothamPro/GothamProBlack/GothamProBlack.eot');
+	src : url('fonts/GothamPro/GothamProBlack/GothamProBlack.ttf');
+	src : url('fonts/GothamPro/GothamProBlack/GothamProBlack.woff');
+	font-family: 'GothamProBlack';
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face{
+	src : url('fonts/GothamPro/GothamProRegular/GothamProRegular.eot');
+	src : url('fonts/GothamPro/GothamProRegular/GothamProRegular.ttf');
+	src : url('fonts/GothamPro/GothamProRegular/GothamProRegular.woff');
+	font-family: 'GothamProRegular';
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face{
+	src : url('fonts/Lato/LatoRegular/LatoRegular.eot');
+	src : url('fonts/Lato/LatoRegular/LatoRegular.ttf');
+	src : url('fonts/Lato/LatoRegular/LatoRegular.woff');
+	font-family: 'LatoRegular';
+	font-style: normal;
+	font-weight: normal;
+}
+body, h1, h2, h3, p, ul , li, div{
+	margin: 0;
+	padding: 0;
+	font-family: 'GothamProRegular';
+}
+
+.overflow{
+	overflow: hidden;
+}
+
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+
+/*header-style*/
+
+.header-bg{
+	background-image: url(images/header-bg.png);
+	height: 100vh;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+.header-bg:before{
+	position: absolute;
+	content: '';
+	display: block;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.4);
+}
+.nav , .logo , .menu{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;	
+	position: relative;
+}
+
+.logo h2{
+	font-size: 22px;
+	text-transform: uppercase;
+	color: #fff;
+}
+.nav{
+	padding-left: 140px;
+	padding-right: 140px;
+	padding-top: 46px;
+}
+.menu li a{
+	font-size: 20px;
+	color: #fff;
+}
+.menu li a:hover:after{
+	width: 100%;
+}
+.menu li a:after{
+	content: '';
+	display: block;
+	width: 0%;
+	height: 2px;
+	transition: 0.75s;
+	background-color: #2ABF7A;
+}
+.menu li a sup{
+	color: #FD5E53;
+}
+.menu li{
+	margin-right: 20px;
+}
+.menu li:last-child{
+	margin-right: 0;
+}
+.header-title h1 , .header-title h2{
+	color: #FFFFFF;
+}
+.header-title{
+	position: absolute;
+	top: 46%;
+	left: 13%;
+}
+.header-title h1{
+	color: #f5f5f5;
+	font-size: 70px;
+	font-family: 'GothamProBlack';
+}
+
+.header-title h2{
+	font-size: 28px;
+}
+.preorder-btn{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 220px;
+	height: 70px;
+	background: rgb(42,191,122);
+    background: linear-gradient(90deg, rgba(42,191,122,1) 0%, rgba(26,131,82,1) 100%);
+	border-radius: 5px 0 0 0;
+}
+.preorder-btn a{
+	display: block;
+	text-align: center;
+	line-height: 70px;
+	font-size: 14px;
+	font-family: 'LatoRegular';
+	text-transform: uppercase;
+	color: #fff;
+}
+
+/*main style*/
+
+.moto-container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.moto-box{
+	position: relative;
+	width: 40%;
+}
+.moto-box:before{
+	content: '';
+	display: block;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.4);
+}
+.moto-box img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.moto-box-info{
+	position: absolute;
+	bottom: 80px;
+	text-align: center;
+	width: 100%;
+}
+.moto-box-info h2{
+	color: #fff;
+	font-size: 50px;
+	text-transform: uppercase;
+
+}
+.moto-box-info a{
+	display: inline-block;
+	color: #2ABF7A;
+	font-size: 18px;
+	transition: 0.3s;
+	text-transform: uppercase;
+	padding-top: 5px;
+}
+.moto-box-info a:hover{
+	text-shadow: 0px 0px 10px #2ABF7A;
+}
+
+.moto-about{
+	height: 100vh;
+	display: flex;
+}
+
+.moto-about-left , .moto-about-right{
+	width: 50%;
+}
+.moto-about-left{
+	background-color: #111111;
+}
+.moto-about-left-box{
+	width: 529px;
+	padding-top: 20%;
+	padding-left: 90px;
+}
+.moto-about-left-box h2{
+	font-size: 30px;
+	font-family: 'GothamProBlack';
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+.moto-about-left-box p {
+	font-size: 20px;
+	margin-top: 50px;
+	color: #CCCCCC;
+}
+.moto-about-left-box span{
+	color : #FD5E53;
+}
+.moto-about-left-box a{
+	font-size: 18px;
+	color : #FD5E53;
+	transition: 0.3s;
+	margin-top: 44px;
+	display: inline-block;
+}
+.moto-about-left-box a:hover{
+	text-shadow: 0 0 10px #FD5E53;
+}
+.moto-about-right{
+	/*overflow: hidden;
+	background-image: url(images/about-img.jpg);
+	background-position: left;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;*/
+}
+.moto-about-right img{
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
+	display: block;
+}
+.moto-blog-container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.moto-blog-box{
+	width: 33.33%;
+	position: relative;
+}
+.moto-blog-box:before{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.4);
+}
+.moto-blog-box img{
+	width: 100%;
+	height: 100%;
+}
+.moto-blog-box-info{
+	position: absolute;
+	bottom: 30px;
+	left: 30px;
+	width: 320px;
+}
+.moto-blog-box-info a{
+	color: #FD5E53;
+	text-transform: uppercase;
+	font-size: 28px;
+	letter-spacing: 3px;
+	font-family: 'GothamProBlack';
+}
+.moto-blog-box-info p{
+	font-size: 17px;
+	color: #fff;
+	padding-top: 17px;
+}
+
+.sub-news-container{
+	height: 390px;
+	background-color: #111111;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.sub-news-container h3{
+	color: #fff;
+	font-size: 25px;
+	font-family: 'GothamProBlack';
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+.sub-news-container span{
+	color: #2ABF7A;
+}
+.sub-news-container form label input{
+	width: 332px;
+	font-size: 18px;
+	border: none;
+	background-color: transparent;
+	color: #fff;
+	transition: 0.3s;
+	display: block;
+}
+.sub-news-container form label:after{
+	width: 100%;
+	content: '';
+	display: block;
+	background-color: #2ABF7A;
+	height: 2px;
+	margin-top: 10px;
+}
+.sub-news-container form label input label:focus > .sub-news-container form label:after{
+	box-shadow: 0 0 6px #2ABF7A;
+	background-color: red;
+}
+
+
+/*footer*/
+
+.footer-container{
+	height: 462px;
+	background-color: #2ABF7A;
+	display: flex;
+	justify-content: space-around;	
+	padding-top: 130px;
+	box-sizing: border-box;
+}
+.footer-box h3{
+	font-size: 25px;
+	color: #fff;
+	padding-bottom: 28px;
+	font-family: 'GothamProBlack';
+}
+.footer-box > ul > li > a{
+	font-size: 18px;
+	color: #fff;
+}
+.footer-box ul > li{
+	padding: 15px 0; 
+}
+.footer-box ul li a span{
+	font-family: 'GothamProBlack';
+}
+
+.footer-social{
+	display: flex;
+	width: 266px;
+	justify-content: space-between;
+}
