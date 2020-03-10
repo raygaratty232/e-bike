@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>e-bike</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="libs/OwlCarouse/owl.carousel.min.css">
+	<link rel="stylesheet" href="libs/OwlCarouse/owl.theme.default.css">
 </head>
 <body>
 	<div class="overflow">
@@ -13,15 +15,16 @@
 				<nav class="nav">
 					<div class="logo">
 						<a href="#">
-							<img src="images/Logo.svg" alt="">
+							<img class="logo-pc" src="images/Logo.svg" alt="logo">
+							<img class="logo-mob" src="images/Logo-mobile.svg" alt="logo">
 						</a>
 					</div>
 					<ul class="menu">
 						<li>
-							<a href="#">Home</a>
+							<a href="index.html">Home</a>
 						</li>
 						<li>
-							<a href="about.html">About </a>
+							<a href="about.html" class="active-page">About</a>
 						</li>
 						<li>
 							<a href="#">One <sup>CD</sup></a>
@@ -122,6 +125,7 @@
 					<label for="sub-news">
 						<input id="sub-news" type="email" placeholder="enter your e-mail ">
 					</label>
+					<button type="submit">SUBSCRIBE</button>
 				</form>
 			</div>
 		</main>
@@ -171,7 +175,7 @@
 			  src="https://code.jquery.com/jquery-3.4.1.min.js"
 			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 			  crossorigin="anonymous"></script>
-<script src="libs/slickSlider/slick.min.js"></script>
+<script src="libs/OwlCarouse/owl.carousel.min.js"></script>
 <script src="script.js"></script>	
 </body>
 </html>
