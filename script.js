@@ -1,3 +1,11 @@
+$(window).on('load' ,function(){
+	$('.specifications-form').fadeOut()
+
+	$('.preorder-moto-btn').click(function(){
+		$('.specifications-form').fadeToggle()
+	})
+
+})
 
 
 

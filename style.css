@@ -59,6 +59,15 @@ input , a , button{
 	background-position: center;
 	position: relative;
 }
+.fix{
+	position: fixed;
+	width: 100%;
+	z-index: 99999;
+	padding-top: 15px !important;
+	padding-bottom: 10px;
+	box-shadow: 0px 10px 32px 5px #000;
+	background: linear-gradient(90deg, rgba(42,191,122,0.8) 0%, rgba(26,131,82,1) 100%);
+}
 .header-bg:before{
 	position: absolute;
 	content: '';
@@ -90,6 +99,9 @@ input , a , button{
 	padding-left: 140px;
 	padding-right: 140px;
 	padding-top: 46px;
+	position: fixed;
+	z-index: 100;
+	width: 85%;
 
 }
 .drop-btn{
@@ -361,7 +373,7 @@ main{
 	background: linear-gradient(90deg,
 	rgba(42,191,122,1) 0%,
 	rgba(26,131,82,1) 100%);
-	border-radius: 25px;
+	border-radius: 5px;
 	text-align: center;
 	line-height: 50px;
 	text-transform: uppercase;
@@ -369,8 +381,9 @@ main{
 	border: none;
 	color: #fff;
 	cursor: pointer;
-	font-size: 18px;
+	font-size: 15px;
 	font-family: 'GothamProBlack';
+	margin-top: -10px;
 }
 .sub-news-container > form > button:hover {
     box-shadow: 0 0 14px  #26AF6F;
@@ -412,6 +425,9 @@ main{
 .footer-box > ul > li > a{
 	font-size: 18px;
 	color: #fff;
+}
+.footer-box > ul > li > a:hover{
+		color: #eef933;
 }
 .footer-box ul > li{
 	padding: 15px 0; 
@@ -698,7 +714,9 @@ main{
 	box-sizing: border-box;
 	margin: auto;
 }
-
+.story-view-nav{
+	padding-top: 20px;
+}
 .story-view-container{
 	margin: auto;
 	padding-top: 148.5px;
@@ -848,8 +866,45 @@ main{
 	max-width: 1680px;
 	margin: auto;
 }
+.specifications-form{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0 ,0, 0.9);
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+.specifications-form form{
+	display: flex;
+	justify-content:space-between;
+	flex-wrap: wrap;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 40%;
+	bottom: 50%;
+	width: 70%;
+	height: 243px;
+	margin:auto;
+}
+.specifications-form form input{
+	width: 48%;
+	height: 50px;
+	border: 2px solid #57585a;
+	border-radius: 5px;
+	color: #fff;
+	background-color: transparent;
+	padding: 11px 0 12px 15px;
+	box-sizing:border-box; 
+}
+.preorder-form-btn{
+	left: 0 !important;
+}
 .specifications-photo{
 	width: 50%;
+	position: relative;
 }
 .specifications-block{
 	display: flex;
@@ -871,6 +926,7 @@ main{
 	display: flex;
 	justify-content: space-between;
 	padding-left: 60px;
+	position: relative;
 }
 .parameters-container ul li {
 	color: #fff;
@@ -881,15 +937,34 @@ main{
 .parameters-right{
 	width: 300px;
 }
+
 .parameters-left li{
 	text-transform: uppercase;
 	font-size: 22px;
 	text-align: right;
 	position: relative;
-	padding: 19px 0;
+	padding: 18.5px 0;
 	font-family: 'GothamProBlack';
 }
-.parameters-left li:after{
+.preorder-form-btn , .preorder-moto-btn{
+	position: absolute;
+	width: 220px;
+	height: 70px;
+	background: rgb(42,191,122);
+	background: linear-gradient(90deg, rgba(42,191,122,1) 0%, rgba(26,131,82,1) 100%);
+	border-radius: 5px;
+	color: #fff;
+	font-size: 14px;
+	border: none;
+	left: 120px;
+	text-transform: uppercase;
+	right: 0;
+	margin: auto;
+	bottom: -100px;
+	cursor: pointer;
+}	
+
+.parameters-right li:before{
 	content: '';
 	position: absolute;
 	display: block;
@@ -897,12 +972,13 @@ main{
 	background-repeat: no-repeat;
 	width: 121px;
 	height: 2px;
-	right: -160px;
+	left: -153px;
 	top: 30px;
 }
 .parameters-right li{
 	font-size: 20px;
 	padding: 20px 0;
+	position: relative;
 }
 @media screen and (max-width: 1024px){
 	.menu{
@@ -916,14 +992,6 @@ main{
 		z-index: 50;
 		transform: translateX(100%);
 		transition: 0.4s;
-	}
-	.fix{
-		position: fixed;
-		width: 100%;
-		z-index: 99999;
-		padding-bottom: 10px;
-		box-shadow: 0px 10px 32px 5px #000;
-		background: linear-gradient(90deg, rgba(42,191,122,1) 0%, rgba(26,131,82,1) 100%);
 	}
 	.logo{
 		padding-left: 20px;
@@ -943,6 +1011,10 @@ main{
 		align-items: center;
 		box-sizing: border-box;
 		padding-top: 25px;
+	}
+	.fix{
+		padding-top: 25px !important;
+
 	}
 	.menu li{
 		margin-right: 0;
@@ -1050,6 +1122,7 @@ main{
 		text-align: center;
 		display: block;
 	}
+
 	.footer-box h3{
 		text-align: center;
 	}
@@ -1122,16 +1195,28 @@ main{
 	.more-story-box {
     	width: 30.3%;
 	}
-}
-@media screen and (max-width: 768px){
-	.moto-blog-box{
-		width: 50%;
+	.specifications-block{
+		flex-direction: column;
+		align-items: center;
 	}
-	.story-view-container{
-		padding-top: 0;
+	.parameters-container{
+		width: 100%;
+		padding: 0 20px;
+		box-sizing: border-box;
+		margin: 0;
+	}
+	.specifications-photo{
+		width: 100%;
+		top: 140px;
+	}
+	.parameters-right li:before {
+		left: -230px;
+	}
+	.preorder-moto-btn{
+		left: 50px;
 	}
 }
-@media screen and (min-height: 1024px){
+@media screen and (max-width: 1024px){
 	.team-container{
 		height: 60vh;
 	}
@@ -1141,7 +1226,27 @@ main{
 	.local-container {
     	min-height: 420px;
 	}
+
 }
+@media screen and (max-width: 768px){
+	.moto-blog-box{
+		width: 50%;
+	}
+	.story-view-container{
+		padding-top: 0;
+	}
+	.parameters-right li:before {
+		width: 55px;
+		left: -105px;
+	}
+	.parameters-right{
+		width: 32%;
+	}
+	.moto-header-title{
+		bottom: 375px;
+	}
+}
+
 @media screen and (max-width: 480px){
 	.nav{
 		padding-right: 0;
@@ -1514,4 +1619,35 @@ main{
 		position: relative;
 		top: 20px;
 	}
+	.parameters-left li{
+		font-size: 18px;
+		text-align: left;
+	}
+	.parameters-right li{
+		font-size: 15px;
+		text-align: right;
+	}
+	.parameters-right li:before {
+		display: none;
+	}
+	.specifications-photo > .specifications-form > .preorder-form-btn{
+		width: 70%;
+	}
+	.moto-header-title{
+		bottom: 290px;
+		left: 40px;
+		font-size: 35px;
+	}
 }	
+@media screen and (max-width: 375px){
+	.parameters-left li{
+		font-size: 15px;
+	}
+	.parameters-right {
+    	width: 60%;
+	}
+	.parameters-container{
+		padding: 0 10px;
+	}
+
+}
