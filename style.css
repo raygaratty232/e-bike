@@ -909,6 +909,8 @@ main{
 .specifications-block{
 	display: flex;
 	padding-top: 70px;
+	align-items: center;
+	height: 100vh;
 }
 .specifications-block img{
 	width: 100%;
@@ -922,7 +924,6 @@ main{
 }
 .parameters-container{
 	width: 	50%;
-	margin: auto;
 	display: flex;
 	justify-content: space-between;
 	padding-left: 60px;
@@ -1198,6 +1199,7 @@ main{
 	.specifications-block{
 		flex-direction: column;
 		align-items: center;
+		height: auto;
 	}
 	.parameters-container{
 		width: 100%;
@@ -1208,7 +1210,7 @@ main{
 	.specifications-photo{
 		width: 100%;
 		top: 140px;
-		height: 545px;
+		height: 100vh;
 	}
 	.parameters-right li:before {
 		left: -230px;
@@ -1245,6 +1247,12 @@ main{
 	}
 	.moto-header-title{
 		bottom: 375px;
+	}
+	.specifications-form form{
+		bottom: 60%;
+	}
+	.specifications-photo{
+		height: 77vh;
 	}
 }
 
@@ -1638,6 +1646,25 @@ main{
 		bottom: 290px;
 		left: 40px;
 		font-size: 35px;
+	}
+	.specifications-photo {
+    	height: 53vh;
+	}
+	.specifications-photo{
+		height: 455px;
+	}
+	.preorder-moto-btn {
+    	left: 5px;
+	}
+	.specifications-form form{
+		width: 85%;
+		top:20%;
+	}
+	.specifications-form form input{
+		height: 30px;
+	}
+	.preorder-form-btn{
+		bottom: -60px;
 	}
 }	
 @media screen and (max-width: 375px){
