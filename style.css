@@ -1208,6 +1208,7 @@ main{
 	.specifications-photo{
 		width: 100%;
 		top: 140px;
+		height: 545px;
 	}
 	.parameters-right li:before {
 		left: -230px;
